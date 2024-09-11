@@ -8,13 +8,13 @@ def foresttreasurehunt():
         fruits = ["banana", "apple", "strawberry", "blueberry", "orange"]
         guessedfruits = []
         while set(guessedfruits) != set(fruits):
-            guessedfruits = input("Guess five fruits: ").split()
+            guessedfruits = input("Guess five fruits to pass or a wild monkey will eat you!!! ").split()
             correctfruits = [fruit for fruit in guessedfruits if fruit in fruits]
             if set(correctfruits) == set(fruits):
                 print("You guessed all the fruits correctly! You may pass.")
             else:
                 print("Correct fruits so far: " + str(correctfruits) + ". Try again.")
-        height = int(input("Enter your height in cm to cross the river: "))
+        height = int(input("Enter your height in cm to cross the river or a hungry tiger will eat you!!! "))
         if height <= 160:
             print("You are too short and drown. Game over.")
             return
